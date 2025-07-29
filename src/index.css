@@ -143,7 +143,7 @@
   .project-card {
     @apply bg-gradient-to-br from-card to-card-hover border border-border
            hover:border-primary/50 hover:shadow-card hover:-translate-y-2
-           transition-all duration-500 group cursor-pointer;
+           transition-all duration-500 cursor-pointer;
   }
   
   /* Experience Card Variants */
