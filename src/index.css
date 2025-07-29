@@ -150,7 +150,7 @@
   .experience-card {
     @apply bg-gradient-to-r from-card via-card-hover to-secondary/20 border border-border
            hover:border-accent hover:shadow-lg hover:scale-[1.02]
-           transition-all duration-400;
+           transition-all duration-300;
   }
   
   /* Award Badge Variants */
