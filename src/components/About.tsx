@@ -2,6 +2,20 @@ import { Button } from "@/components/ui/button";
 import { Heart, Coffee, Code, Rocket } from "lucide-react";
 
 const About = () => {
+  const handleDownloadResume = () => {
+    window.open('https://docs.google.com/document/d/1uTQTi5FA9vgfic3AYAPCF8Y_DRASv8x2wmrKoowYHqA/edit?tab=t.0#heading=h.tm9q5ng275su', '_blank', 'noopener noreferrer');
+  };
+
+  const handleSpeakingEngagements = () => {
+    // Scroll to contact section for speaking inquiries
+    const contactElement = document.getElementById('contact');
+    if (contactElement) {
+      contactElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
   const values = [
     {
       icon: <Code className="h-8 w-8" />,
@@ -63,10 +77,17 @@ const About = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="hero-button">
+              <Button 
+                className="hero-button"
+                onClick={handleDownloadResume}
+              >
                 📄 Download Resume
               </Button>
-              <Button variant="outline" className="hero-secondary">
+              <Button 
+                variant="outline" 
+                className="hero-secondary"
+                onClick={handleSpeakingEngagements}
+              >
                 🎤 Speaking Engagements
               </Button>
             </div>

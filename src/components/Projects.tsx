@@ -3,6 +3,20 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github, Filter } from "lucide-react";
 import { useState } from "react";
 import projectShowcase from "@/assets/project-showcase.jpg";
+import automatedn8nImg from '../assets/automatedn8n.png';
+import RagImg from '../assets/Rag.png';
+import gmailImg from '../assets/gmail.png';
+import libasImg from '../assets/libas.png';
+import yeloImg from '../assets/yelo.png';
+import dawoodImg from '../assets/dawood.png';import cartistan from '../assets/cartistan.png';
+import aiImg from '../assets/ai.png';
+import solanaImg from '../assets/solana.jpeg';
+import flowImg from '../assets/flow.png';
+import chatImg from '../assets/chat.jpeg';
+import rhsImg from '../assets/rhs.png';
+
+
+
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -17,71 +31,220 @@ const Projects = () => {
 
   const projects = [
     {
-      id: 1,
-      title: "DeFi Trading Platform",
-      description: "Solana-based decentralized trading platform with advanced analytics and automated trading features.",
-      image: projectShowcase,
+      id: 999,
+      title: "BECM – Blockchain Enabled Collectible Marketplace on Solana",
+      description: "BECM is a decentralized NFT marketplace on Solana that lets users mint, trade, and explore digital collectibles with full on-chain metadata and real-time Phantom Wallet integration. It delivers a fast, low-cost Web3 experience using tools like Arweave/IPFS and Metaplex for a fully decentralized ecosystem.",
+      image: solanaImg, // fallback image
       category: "web3",
-      tags: ["Solana", "Rust", "Anchor", "React", "TypeScript"],
-      github: "#",
-      live: "#",
-      featured: true
+      tags: [
+        "Solana",
+        "Rust",
+        "Anchor",
+        "NFT",
+        "Metaplex",
+        "Arweave",
+        "IPFS",
+        "spl-token",
+        "Phantom Wallet",
+        "Solana Wallet Adapter",
+        "Web3",
+        "Solscan",
+        "Explorer Integration"
+      ],
+      featured: true,
+      link: "https://github.com/usmanimran-dev/Master",
+      github: "https://github.com/usmanimran-dev/Master",   
+    },
+    {
+      id: -2,
+      title: "Gmail AI Email Manager",
+      description: "An AI-powered workflow for Gmail that automatically categorizes, summarizes, and drafts replies to emails. Integrates with OpenAI for smart suggestions, prioritization, and auto-organization. Boosts productivity by handling routine email tasks, flagging important messages, and providing one-click responses—all within your Gmail inbox.",
+      image: gmailImg,
+      category: "ai",
+      tags: ["Gmail", "AI", "Email Automation", "OpenAI", "Productivity", "Smart Replies"],
+      featured: true,
+      link: "https://n8n.io/workflows/4722-gmail-ai-email-manager/",
+      
+    },
+    {
+      id: -1,
+      title: "RAG Chatbot for Company Documents using Google Drive and Gemini",
+      description: "A RAG-based chatbot that indexes company docs from Google Drive and answers queries using Gemini AI. Enables secure, real-time Q&A over internal files. Features: daily sync, semantic search, context-aware answers, and easy deployment.",
+      image: RagImg,
+      category: "ai",
+      tags: ["RAG", "Chatbot", "Google Drive", "Gemini", "AI", "Semantic Search", "Automation"],
+      featured: true,
+      link: "https://n8n.io/workflows/advanced-content-research",
+      github: undefined
+    },
+    {
+      id: 0,
+      title: "Automated Content Marketing Intelligence with OpenAI, Ahrefs & Multi-platform Integration",
+      description: "N8n workflow for automated content research: integrates OpenAI, Ahrefs, SEMrush, BuzzSumo, Reddit, Airtable, Notion & Slack. Automates competitor analysis, keyword discovery, audience insights, and delivers AI-powered recommendations. Outputs to Airtable, Notion, Slack. Runs daily with robust error handling.",
+      image: automatedn8nImg,
+      category: "ai",
+      tags: ["N8n", "OpenAI", "Ahrefs", "SEMrush", "BuzzSumo", "Airtable", "Notion", "Slack", "Automation"],
+      featured: true,
+      link: "https://n8n.io/workflows/advanced-content-research",
+      github: undefined
+    },
+    {
+      id: 1,
+      title: "Dawood Super Store",
+      description: "Your Everyday Grocery Destination (Built on Shopify)",
+      image: dawoodImg,
+      category: "shopify",
+      tags: [
+        "Shopify",
+        "E-commerce Platform",
+        "Liquid",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Shopify Theme Editor",
+        "Google Analytics",
+        "Shopify Hosting",
+        "Custom Domain",
+        "SEO Optimization",
+        "On-page SEO",
+
+      ],
+      featured: true,
+      link: "https://dawoodsuperstore.myshopify.com/",
+      github: undefined
+    },
+    {
+      id: 10,
+      title: "RHS Wellness – Premium Natural Health Supplements",
+      description: "Explore RHS Wellness for high-quality, doctor-recommended supplements designed to support your immune system, energy, and overall well-being. Shop trusted health solutions backed by science.",
+      image: rhsImg, // fallback image
+      category: "shopify",
+      tags: [
+        "Shopify",
+        "E-commerce",
+        "Supplements",
+        "Health",
+        "Wellness",
+        "Responsive Design",
+        "Doctor Recommended",
+        "Premium Products"
+      ],
+      featured: true,
+      link: "https://shoprhswellness.com/"
     },
     {
       id: 2,
-      title: "AI Content Generator",
-      description: "AI-powered content creation tool with natural language processing and automated workflows.",
-      image: projectShowcase,
-      category: "ai",
-      tags: ["Python", "OpenAI", "Next.js", "Supabase"],
-      github: "#",
-      live: "#",
-      featured: true
+      title: "Libaas By RM",
+      description: "Fashion Retail Store Built on Shopify",
+      image: libasImg,
+      category: "shopify",
+      tags: [
+        "Shopify",
+        "Fashion",
+        "E-commerce Platform",
+        "Liquid",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Meta fields",
+        "Sitemap.xml",
+        "Mobile Optimization",
+        "Responsive Design",
+        "Developer Tools",
+        "Shopify CLI",
+        "Git",
+        "ThemeKit"
+      ],
+      featured: true,
+      link: "https://libaasbyrm.myshopify.com/"
+    },
+    {
+      id: 11,
+      title: "Solana CRUD dApp – Journal App Powered by Anchor Framework",
+      description: "A decentralized journal app built on Solana using the Anchor framework. Users can create, view, update, and delete journal entries directly on-chain. It features Phantom wallet integration, a React frontend, and ensures secure, transparent data storage.",
+      image: solanaImg,
+      category: "web3",
+      tags: [
+        "Solana",
+        "Anchor",
+        "Rust",
+        "SPL",
+        "Smart Contracts",
+        "React.js",
+        "Phantom Wallet",
+        "CRUD",
+        "Blockchain",
+        "dApp",
+        "State Management"
+      ],
+      featured: true,
+      link: "https://github.com/usmanimran-dev/CRUD-Dapp-Project-Solana",
+      github: "https://github.com/usmanimran-dev/CRUD-Dapp-Project-Solana"
     },
     {
       id: 3,
-      title: "WeCredit Finance App",
-      description: "Complete finance application built with Bubble.io featuring OTP authentication and API integrations.",
-      image: projectShowcase,
+      title: "Yelo",
+      description: "Pakistan’s Local Business Discovery & Review Platform (Built on Bubble.io)",
+      image: yeloImg,
       category: "nocode",
-      tags: ["Bubble.io", "APIs", "Authentication", "Finance"],
-      github: "#",
-      live: "#",
-      featured: false
+      tags: ["Bubble.io", "Discovery", "Reviews"],
+      featured: true,
+      link: "https://yelo-13406.bubbleapps.io/version-test/login_into_business_account?"
     },
     {
       id: 4,
-      title: "E-commerce Analytics Dashboard",
-      description: "Real-time analytics dashboard for e-commerce platforms with advanced reporting and insights.",
-      image: projectShowcase,
-      category: "fullstack",
-      tags: ["React", "Node.js", "MongoDB", "Chart.js"],
-      github: "#",
-      live: "#",
-      featured: false
+      title: "AI Proposal Generator",
+      description: "Automated proposals with GPT-4, PandaDoc & Make.com Integration",
+      image: aiImg,
+      category: "ai",
+      tags: ["AI", "GPT-4", "Automation"],
+      featured: true,
+      link: "https://github.com/usmanimran-dev/ai-proposal-generator",
+      github: "https://github.com/usmanimran-dev/ai-proposal-generator"
     },
     {
       id: 5,
-      title: "Shopify Store Builder",
-      description: "Custom Shopify store development for Libass by Raheela completed in just 4 days.",
-      image: projectShowcase,
-      category: "fullstack",
-      tags: ["Shopify", "Liquid", "JavaScript", "CSS"],
-      github: "#",
-      live: "#",
-      featured: false
+      title: "Cartistan",
+      description: "On-Demand Grocery Delivery App (Built with Bubble.io)",
+      image: cartistan,
+      category: "nocode",
+      tags: ["Bubble.io", "Delivery", "Grocery"],
+      featured: true,
+      link: "https://cartistan-73886.bubbleapps.io/version-test"
     },
     {
       id: 6,
-      title: "Automation Workflow Engine",
-      description: "n8n-based automation platform connecting multiple services and APIs for business process optimization.",
-      image: projectShowcase,
+      title: "FlowNest",
+      description: "AI-Powered Project Manager (Built with Bubble.io)",
+      image: flowImg,
       category: "nocode",
-      tags: ["n8n", "APIs", "Automation", "Webhooks"],
-      github: "#",
-      live: "#",
-      featured: false
-    }
+      tags: ["Bubble.io", "AI", "Project Management"],
+      featured: true,
+      link: "https://demo-app-63324.bubbleapps.io/version-test/?&v=projects"
+    },
+    {
+      id: 7,
+      title: "Web3 Voting dApp-On-Chain Polling System",
+      description: "A decentralized voting application built with Solana and Anchor. Users can create proposals, vote securely via Phantom wallet, and view live results—all stored transparently on-chain with a modern React UI.",
+      image:  solanaImg,
+      category: "web3",
+      tags: ["Solana", "Web3", "Voting"],
+      featured: true,
+      link: "https://github.com/usmanimran-dev/voting-dapp-3",
+      github: "https://github.com/usmanimran-dev/voting-dapp-3"
+    },
+    {
+      id: 8,
+      title: "Open AI Chat Bot",
+      description: "Conversational AI Chat Bot for instant support",
+      image: chatImg,
+      category: "ai",
+      tags: ["OpenAI", "Chatbot"],
+      featured: true,
+      link: "https://github.com/usmanimran-dev/ai-chatbot",
+      github: "https://github.com/usmanimran-dev/ai-chatbot"
+    },
+    
   ];
 
   const filteredProjects = activeFilter === "all" 
@@ -157,6 +320,9 @@ const Projects = () => {
                 <p className="text-muted-foreground mb-4 leading-relaxed">
                   {project.description}
                 </p>
+                <Button size="sm" variant="secondary" className="mb-4 w-full" disabled>
+                  View More
+                </Button>
 
                 {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -169,11 +335,32 @@ const Projects = () => {
 
                 {/* Action Buttons */}
                 <div className="flex gap-3">
-                  <Button size="sm" variant="outline" className="flex-1">
+                  <Button 
+                    size="sm" 
+                    variant="outline" 
+                    className="flex-1"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      if (project.github) {
+                        window.open(project.github, '_blank', 'noopener,noreferrer');
+                      }
+                    }}
+                    disabled={!project.github}
+                  >
                     <Github className="h-4 w-4 mr-2" />
                     Code
                   </Button>
-                  <Button size="sm" className="flex-1 hero-button">
+                  <Button 
+                    size="sm" 
+                    className="flex-1 hero-button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      if (project.link) {
+                        window.open(project.link, '_blank', 'noopener,noreferrer');
+                      }
+                    }}
+                    disabled={!project.link}
+                  >
                     <ExternalLink className="h-4 w-4 mr-2" />
                     Live Demo
                   </Button>
@@ -185,9 +372,13 @@ const Projects = () => {
 
         {/* View More Projects */}
         <div className="text-center mt-12">
-          <Button className="hero-button" size="lg">
+          <Button 
+            className="hero-button" 
+            size="lg"
+            onClick={() => window.open('https://github.com/usmanimran-dev', '_blank')}
+          >
             <Github className="h-5 w-5 mr-2" />
-            View All Projects on GitHub
+            Visit GitHub Project
           </Button>
         </div>
       </div>

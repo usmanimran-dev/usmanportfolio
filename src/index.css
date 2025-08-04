@@ -5,6 +5,11 @@
 /* Modern Tech Portfolio Design System */
 
 @layer base {
+  /* Smooth scroll behavior for all browsers */
+  html {
+    scroll-behavior: smooth;
+  }
+  
   :root {
     /* Core Colors - Modern Tech Palette */
     --background: 0 0% 100%;

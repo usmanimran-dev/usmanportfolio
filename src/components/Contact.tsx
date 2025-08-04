@@ -9,7 +9,7 @@ const Contact = () => {
       title: "Schedule a Call",
       description: "Book a free 30-minute consultation",
       action: "Book Now",
-      href: "#",
+      href: "https://cal.com/muhammad-osman-rbpokc/30min",
       primary: true
     },
     {
@@ -17,7 +17,7 @@ const Contact = () => {
       title: "Email Me",
       description: "Get in touch directly",
       action: "Send Email",
-      href: "mailto:hello@osman.dev",
+      href: "mailto:osmanmuhammad465@gmail.com",
       primary: false
     },
     {
@@ -25,7 +25,7 @@ const Contact = () => {
       title: "Quick Chat",
       description: "Let's discuss your project",
       action: "Start Chat",
-      href: "#",
+      href: "https://wa.me/923259283582",
       primary: false
     }
   ];
@@ -89,12 +89,14 @@ const Contact = () => {
                       }`}>
                         {method.description}
                       </p>
-                      <Button 
-                        variant={method.primary ? "secondary" : "default"}
-                        className={method.primary ? "" : "hero-button"}
-                      >
-                        {method.action}
-                      </Button>
+                      <a href={method.href} target="_blank" rel="noopener noreferrer">
+                        <Button 
+                          variant={method.primary ? "secondary" : "default"}
+                          className={method.primary ? "" : "hero-button"}
+                        >
+                          {method.action}
+                        </Button>
+                      </a>
                     </div>
                   </div>
                 </Card>

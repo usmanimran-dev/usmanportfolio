@@ -23,6 +23,29 @@ const Header = () => {
     { href: "#contact", label: "Contact" }
   ];
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const targetId = href.substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const contactElement = document.getElementById('contact');
+    if (contactElement) {
+      contactElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled ? "bg-background/80 backdrop-blur-md shadow-soft" : "bg-transparent"
@@ -40,15 +63,21 @@ const Header = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="text-foreground hover:text-primary transition-all duration-300 relative group font-medium"
+                onClick={(e) => handleSmoothScroll(e, item.href)}
+                className="text-foreground hover:text-primary transition-all duration-300 relative group font-medium cursor-pointer"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-primary group-hover:w-full transition-all duration-300"></span>
               </a>
             ))}
-            <Button variant="outline" className="hero-secondary">
+            <a 
+              href="#contact"
+              onClick={handleContactClick}
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground hero-secondary h-10 px-4 py-2"
+              aria-label="Let's connect - go to contact section"
+            >
               📅 Let's Connect
-            </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -70,15 +99,26 @@ const Header = () => {
                 <a
                   key={item.href}
                   href={item.href}
-                  className="text-foreground hover:text-primary transition-colors font-medium"
-                  onClick={() => setIsMenuOpen(false)}
+                  className="text-foreground hover:text-primary transition-colors font-medium cursor-pointer"
+                  onClick={(e) => {
+                    handleSmoothScroll(e, item.href);
+                    setIsMenuOpen(false);
+                  }}
                 >
                   {item.label}
                 </a>
               ))}
-              <Button variant="outline" className="hero-secondary w-fit">
+              <a 
+                href="#contact"
+                onClick={(e) => {
+                  handleContactClick(e);
+                  setIsMenuOpen(false);
+                }}
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground hero-secondary h-10 px-4 py-2 w-fit"
+                aria-label="Let's connect - go to contact section"
+              >
                 📅 Let's Connect
-              </Button>
+              </a>
             </div>
           </div>
         )}

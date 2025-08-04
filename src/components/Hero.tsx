@@ -10,6 +10,17 @@ const Hero = () => {
     setIsVisible(true);
   }, []);
 
+  const handleSmoothScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  };
+
   return (
     <section id="home" className="min-h-screen relative overflow-hidden">
       {/* Background Image with Overlay */}
@@ -47,34 +58,53 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="hero-button group" size="lg">
+              <a 
+                href="#projects"
+                onClick={(e) => handleSmoothScroll(e, 'projects')}
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hero-button group h-11 px-8 py-2 text-primary-foreground shadow hover:bg-primary/90"
+                aria-label="View my work and projects"
+              >
                 View My Work
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" className="hero-secondary" size="lg">
+              </a>
+              <a 
+                href="#contact"
+                onClick={(e) => handleSmoothScroll(e, 'contact')}
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground hero-secondary h-11 px-8 py-2"
+                aria-label="Schedule a call or meeting"
+              >
                 📅 Schedule Call
-              </Button>
+              </a>
+              <a 
+                href="https://docs.google.com/document/d/1uTQTi5FA9vgfic3AYAPCF8Y_DRASv8x2wmrKoowYHqA/edit?tab=t.0#heading=h.tm9q5ng275su"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8 py-2"
+                download
+              >
+                📄 Download Resume
+              </a>
             </div>
 
             {/* Social Links */}
             <div className="flex items-center space-x-6">
               <a 
-                href="#" 
+                href="https://github.com/usmanimran-dev" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 rounded-lg bg-card/50 hover:bg-card text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+                aria-label="GitHub Profile"
               >
                 <Github className="h-6 w-6" />
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/muhammad-osman-037aa0302/" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 rounded-lg bg-card/50 hover:bg-card text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+                aria-label="LinkedIn Profile"
               >
                 <Linkedin className="h-6 w-6" />
-              </a>
-              <a 
-                href="#" 
-                className="p-3 rounded-lg bg-card/50 hover:bg-card text-muted-foreground hover:text-primary transition-all duration-300 hover:scale-110"
-              >
-                <Mail className="h-6 w-6" />
               </a>
             </div>
           </div>
