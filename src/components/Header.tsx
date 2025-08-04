@@ -54,7 +54,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="text-2xl font-bold text-gradient-hero">
-            Osman.dev
+            Usman.Dev
           </div>
 
           {/* Desktop Navigation */}

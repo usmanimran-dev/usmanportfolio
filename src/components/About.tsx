@@ -54,7 +54,7 @@ const About = () => {
           <div className="space-y-8 fade-in-up">
             <div>
               <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-                👨‍💻 <span className="text-gradient-hero">Meet Osman</span>
+                👨‍💻 <span className="text-gradient-hero">Meet Usman</span>
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
