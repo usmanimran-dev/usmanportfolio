@@ -16,7 +16,8 @@ import chatImg from '../assets/chat.jpeg';
 import rhsImg from '../assets/rhs.png';
 import linkedinImg from '../assets/linkedin.png';
 import totkyImg from '../assets/totky.png';
-import cocoImg from '../assets/coco.png';
+import cocoImg from '../assets/coco.png'; 
+import videon8nImg from '../assets/videon8n.png';
 
 
 
@@ -26,11 +27,11 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
 
   const filters = [
-    { id: "all", label: "All Projects", count: 12 },
+    { id: "all", label: "All Projects", count: 13 },
     { id: "web3", label: "Web3", count: 4 },
-    { id: "ai", label: "AI/ML", count: 3 },
+    { id: "ai", label: "AI/ML", count: 4 },
     { id: "shopify-wordpress", label: "Shopify and Wordpress", count: 6 },
-    { id: "nocode", label: "No-Code", count: 3 }
+    { id: "nocode", label: "No-Code", count: 4 }
   ];
 
   const projects = [
@@ -82,7 +83,26 @@ const Projects = () => {
       github: undefined
     },
     {
-      id: 1001,
+      id: 20250807,
+      title: "AI-Powered Email Auto-Reply System with n8n — Built to Save Time & Sanity!",
+      description: `📩 Tired of replying to the same emails again and again?\nI was too. So I built a smart, fully automated email response system using n8n — powered by GPT and Gmail API — and it works like magic.\n\n🚀 What It Does:\n\n✅ Detects new emails (Gmail trigger)\n✅ Uses OpenAI GPT to write personalized replies\n✅ Adapts responses based on subject, sender, or context\n✅ Sends replies instantly\n✅ Logs each email + response into Google Sheets\n\n🎯 Outcome?\nProfessional, on-brand, and AI-written responses — 24/7, no manual work.`,
+      image: videon8nImg,
+      category: "nocode",
+      tags: [
+        "n8n",
+        "Gmail API",
+        "OpenAI GPT",
+        "Google Sheets",
+        "Automation",
+        "No-Code",
+        "AI",
+        "Auto-Reply"
+      ],
+      featured: true,
+      link: "https://vimeo.com/1107894672?share=copy#t=0"
+    },
+    {
+      id: 999,
       title: "Professional Networking Platform (LinkedIn Clone) – Built with Bubble.io",
       description: "A feature-rich LinkedIn-style web app developed using Bubble.io, enabling users to create profiles, connect with professionals, post updates, apply for jobs, and message in real-time. The platform includes dynamic user feeds, job listings, and role-based dashboards — all built without code, showcasing Bubble’s full-stack capabilities.",
       image: linkedinImg, // Placeholder image
