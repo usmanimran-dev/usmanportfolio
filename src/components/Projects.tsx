@@ -14,6 +14,10 @@ import solanaImg from '../assets/solana.jpeg';
 import flowImg from '../assets/flow.png';
 import chatImg from '../assets/chat.jpeg';
 import rhsImg from '../assets/rhs.png';
+import linkedinImg from '../assets/linkedin.png';
+import totkyImg from '../assets/totky.png';
+import cocoImg from '../assets/coco.png';
+
 
 
 
@@ -25,7 +29,7 @@ const Projects = () => {
     { id: "all", label: "All Projects", count: 12 },
     { id: "web3", label: "Web3", count: 4 },
     { id: "ai", label: "AI/ML", count: 3 },
-    { id: "fullstack", label: "Full-Stack", count: 5 },
+    { id: "shopify-wordpress", label: "Shopify and Wordpress", count: 6 },
     { id: "nocode", label: "No-Code", count: 3 }
   ];
 
@@ -78,16 +82,26 @@ const Projects = () => {
       github: undefined
     },
     {
-      id: 0,
-      title: "Automated Content Marketing Intelligence with OpenAI, Ahrefs & Multi-platform Integration",
-      description: "N8n workflow for automated content research: integrates OpenAI, Ahrefs, SEMrush, BuzzSumo, Reddit, Airtable, Notion & Slack. Automates competitor analysis, keyword discovery, audience insights, and delivers AI-powered recommendations. Outputs to Airtable, Notion, Slack. Runs daily with robust error handling.",
-      image: automatedn8nImg,
-      category: "ai",
-      tags: ["N8n", "OpenAI", "Ahrefs", "SEMrush", "BuzzSumo", "Airtable", "Notion", "Slack", "Automation"],
+      id: 1001,
+      title: "Professional Networking Platform (LinkedIn Clone) – Built with Bubble.io",
+      description: "A feature-rich LinkedIn-style web app developed using Bubble.io, enabling users to create profiles, connect with professionals, post updates, apply for jobs, and message in real-time. The platform includes dynamic user feeds, job listings, and role-based dashboards — all built without code, showcasing Bubble’s full-stack capabilities.",
+      image: linkedinImg, // Placeholder image
+      category: "nocode",
+      tags: [
+        "Bubble.io",
+        "No-Code",
+        "Professional Networking",
+        "Real-Time Messaging",
+        "Job Listings",
+        "User Feeds",
+        "Role-Based Dashboards",
+        "Full-Stack"
+      ],
       featured: true,
-      link: "https://n8n.io/workflows/advanced-content-research",
-      github: undefined
+      link: "https://bubble.io/page?id=linkedin-16318&tab=Design&name=index", // Live demo link
+      github: undefined // Not applicable for Bubble.io projects
     },
+    
     {
       id: 1,
       title: "Dawood Super Store",
@@ -131,6 +145,28 @@ const Projects = () => {
       ],
       featured: true,
       link: "https://shoprhswellness.com/"
+    },
+    {
+      id: 23,
+      title: "Cocoba Chocolate – Shopify Store",
+      description: "Built and customized an elegant Shopify store for Cocoba Chocolate, a UK-based gourmet chocolate brand. Focused on intuitive product presentation, especially for their signature hot chocolate bombs, and ensured a smooth, user-friendly checkout experience.\n\nKey Highlights:\n- Enhanced UI/UX for better product showcasing\n- Mobile responsiveness\n- Smooth cart and checkout flow\n- Integrated collection pages and custom styling\n\nClient Source: Upwork",
+      image: cocoImg, // Replace with a specific Cocoba image if available
+      category: "shopify",
+      tags: ["Shopify", "E-commerce", "UI/UX", "Mobile Responsive", "Custom Styling", "Upwork", "Chocolate", "Gourmet"],
+      featured: true,
+      link: "https://www.cocobachocolate.com/collections/hot-chocolate-bombs",
+      github: undefined
+    },
+    {
+      id: 22,
+      title: "Totkay.com – Natural Home Remedies & Beauty Tips",
+      description: "A wellness and lifestyle blog sharing simple, proven desi totkay (home remedies) for skincare, hair care, fitness, and everyday health—written in both Urdu and English. Founded by Dr. Nimra Chohan, the platform combines cultural wisdom with modern readability to help readers achieve holistic well-being.",
+      image: totkyImg , // Update this to a specific asset if available
+      category: "shopify",
+      tags: ["Shopify", "Blog", "Wellness", "Home Remedies", "Beauty Tips", "Urdu", "English", "Lifestyle"],
+      featured: true,
+      link: "https://totkay.com/",
+      github: undefined
     },
     {
       id: 2,
@@ -199,8 +235,7 @@ const Projects = () => {
       category: "ai",
       tags: ["AI", "GPT-4", "Automation"],
       featured: true,
-      link: "https://github.com/usmanimran-dev/ai-proposal-generator",
-      github: "https://github.com/usmanimran-dev/ai-proposal-generator"
+      link: "https://www.linkedin.com/posts/muhammad-osman-037aa0302_automation-makedotcom-aiautomation-activity-7288342314706456576-c5eR?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE1nQisBIBfECXcsiCd_DoOk5hnMvOVSNNY",
     },
     {
       id: 5,
@@ -241,15 +276,16 @@ const Projects = () => {
       category: "ai",
       tags: ["OpenAI", "Chatbot"],
       featured: true,
-      link: "https://github.com/usmanimran-dev/ai-chatbot",
-      github: "https://github.com/usmanimran-dev/ai-chatbot"
+      link: "https://bubble.io/page?id=open-ai-chatbot-92290&tab=Design&name=index",
     },
     
   ];
 
-  const filteredProjects = activeFilter === "all" 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
+  const filteredProjects = activeFilter === "all"
+    ? projects
+    : activeFilter === "shopify-wordpress"
+      ? projects.filter(project => project.category === "shopify" || project.category === "wordpress")
+      : projects.filter(project => project.category === activeFilter);
 
   return (
     <section id="projects" className="py-20 bg-background">
