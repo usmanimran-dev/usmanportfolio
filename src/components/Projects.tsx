@@ -36,6 +36,25 @@ const Projects = () => {
 
   const projects = [
     {
+      id: 20250807,
+      title: "AI-Powered Email Auto-Reply System with n8n — Built to Save Time & Sanity!",
+      description: `📩 Tired of replying to the same emails again and again?\nI was too. So I built a smart, fully automated email response system using n8n — powered by GPT and Gmail API — and it works like magic.\n\n🚀 What It Does:\n\n✅ Detects new emails (Gmail trigger)\n✅ Uses OpenAI GPT to write personalized replies\n✅ Adapts responses based on subject, sender, or context\n✅ Sends replies instantly\n✅ Logs each email + response into Google Sheets\n\n🎯 Outcome?\nProfessional, on-brand, and AI-written responses — 24/7, no manual work.`,
+      image: videon8nImg,
+      category: "nocode",
+      tags: [
+        "n8n",
+        "Gmail API",
+        "OpenAI GPT",
+        "Google Sheets",
+        "Automation",
+        "No-Code",
+        "AI",
+        "Auto-Reply"
+      ],
+      featured: true,
+      link: "https://vimeo.com/1107894672?share=copy#t=0"
+    },
+    {
       id: 999,
       title: "BECM – Blockchain Enabled Collectible Marketplace on Solana",
       description: "BECM is a decentralized NFT marketplace on Solana that lets users mint, trade, and explore digital collectibles with full on-chain metadata and real-time Phantom Wallet integration. It delivers a fast, low-cost Web3 experience using tools like Arweave/IPFS and Metaplex for a fully decentralized ecosystem.",
@@ -82,25 +101,7 @@ const Projects = () => {
       link: "https://n8n.io/workflows/advanced-content-research",
       github: undefined
     },
-    {
-      id: 20250807,
-      title: "AI-Powered Email Auto-Reply System with n8n — Built to Save Time & Sanity!",
-      description: `📩 Tired of replying to the same emails again and again?\nI was too. So I built a smart, fully automated email response system using n8n — powered by GPT and Gmail API — and it works like magic.\n\n🚀 What It Does:\n\n✅ Detects new emails (Gmail trigger)\n✅ Uses OpenAI GPT to write personalized replies\n✅ Adapts responses based on subject, sender, or context\n✅ Sends replies instantly\n✅ Logs each email + response into Google Sheets\n\n🎯 Outcome?\nProfessional, on-brand, and AI-written responses — 24/7, no manual work.`,
-      image: videon8nImg,
-      category: "nocode",
-      tags: [
-        "n8n",
-        "Gmail API",
-        "OpenAI GPT",
-        "Google Sheets",
-        "Automation",
-        "No-Code",
-        "AI",
-        "Auto-Reply"
-      ],
-      featured: true,
-      link: "https://vimeo.com/1107894672?share=copy#t=0"
-    },
+
     {
       id: 999,
       title: "Professional Networking Platform (LinkedIn Clone) – Built with Bubble.io",
