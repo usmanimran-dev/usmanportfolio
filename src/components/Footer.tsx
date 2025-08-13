@@ -31,7 +31,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="md:col-span-2">
             <div className="text-2xl font-bold text-gradient-hero mb-4">
-              Usman.Dev
+              Usman Imran
             </div>
             <p className="text-muted-foreground mb-6 max-w-md">
               Full-Stack Builder specializing in Web3, AI & No-Code solutions. 

@@ -40,10 +40,10 @@ const About = () => {
   ];
 
   const stats = [
-    { number: "100+", label: "Projects Completed", emoji: "🚀" },
-    { number: "5+", label: "Years Experience", emoji: "⏰" },
-    { number: "15+", label: "Technologies", emoji: "⚡" },
-    { number: "50+", label: "Happy Clients", emoji: "😊" }
+    { number: "13+", label: "Projects Completed", emoji: "🚀" },
+    { number: "4+", label: "Years Experience", emoji: "⏰" },
+    { number: "10+", label: "Technologies", emoji: "⚡" },
+    { number: "15+", label: "Happy Clients", emoji: "😊" }
   ];
 
   return (
@@ -125,28 +125,32 @@ const About = () => {
           </div>
         </div>
 
-        {/* Values Section */}
+        {/* Certificates & Training */}
         <div className="mt-20">
           <h3 className="text-3xl font-bold text-center mb-12">
-            💎 <span className="text-gradient-primary">Core Values</span>
+            📜 <span className="text-gradient-primary">Certificates & Training</span>
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <div
-                key={value.title}
-                className="experience-card p-6 text-center group"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="text-primary mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
-                  {value.icon}
-                </div>
-                <h4 className="text-xl font-semibold mb-3">{value.title}</h4>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {value.description}
-                </p>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="experience-card p-6 hover:shadow-card transition-shadow duration-300">
+              <h4 className="text-lg font-semibold mb-2">Generative AI with Large Language Models</h4>
+              <p className="text-muted-foreground text-sm">DeepLearning.AI & AWS</p>
+            </div>
+            
+            <div className="experience-card p-6 hover:shadow-card transition-shadow duration-300">
+              <h4 className="text-lg font-semibold mb-2">LangChain for LLM Application Development</h4>
+              <p className="text-muted-foreground text-sm">DeepLearning.AI</p>
+            </div>
+            
+            <div className="experience-card p-6 hover:shadow-card transition-shadow duration-300">
+              <h4 className="text-lg font-semibold mb-2">ChatGPT Prompt Engineering for Developers</h4>
+              <p className="text-muted-foreground text-sm">DeepLearning.AI & OpenAI</p>
+            </div>
+            
+            <div className="experience-card p-6 hover:shadow-card transition-shadow duration-300">
+              <h4 className="text-lg font-semibold mb-2">API Development and Integration</h4>
+              <p className="text-muted-foreground text-sm">LinkedIn Learning</p>
+            </div>
           </div>
         </div>
 

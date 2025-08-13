@@ -154,31 +154,33 @@ const Contact = () => {
                 Location
               </h4>
               <div className="space-y-2">
-                <div className="font-medium">🌍 Remote First</div>
+                <div className="font-medium">📍 Karachi, Pakistan</div>
                 <div className="text-sm text-muted-foreground">
-                  Working with clients globally
+                  Available for remote work worldwide
                 </div>
                 <div className="text-sm text-muted-foreground">
-                  EST Timezone (UTC-5)
+                  PKT Timezone (UTC+5)
                 </div>
               </div>
             </Card>
 
-            {/* Languages */}
+            {/* Education */}
             <Card className="p-6 experience-card">
-              <h4 className="text-xl font-semibold mb-4">🗣️ Languages</h4>
+              <h4 className="text-xl font-semibold mb-4 flex items-center gap-2">
+                🎓 Education
+              </h4>
               <div className="space-y-2">
-                <div className="flex justify-between">
-                  <span>English</span>
-                  <span className="text-accent">Native</span>
+                <div className="font-medium">National College</div>
+                <div className="text-sm text-muted-foreground">
+                  Bachelor of Science in Computer Science
                 </div>
-                <div className="flex justify-between">
-                  <span>Turkish</span>
-                  <span className="text-accent">Native</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Spanish</span>
-                  <span className="text-muted-foreground">Basic</span>
+                <div className="text-sm mt-3">
+                  <div className="font-medium text-foreground mb-1">Relevant Coursework:</div>
+                  <ul className="list-disc list-inside space-y-1 text-muted-foreground">
+                    <li>Software Development</li>
+                    <li>Database Systems</li>
+                    <li>Web Technologies</li>
+                  </ul>
                 </div>
               </div>
             </Card>

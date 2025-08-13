@@ -18,7 +18,8 @@ import linkedinImg from '../assets/linkedin.png';
 import totkyImg from '../assets/totky.png';
 import cocoImg from '../assets/coco.png'; 
 import videon8nImg from '../assets/videon8n.png';
-
+import keyeImg from '../assets/keye.png';
+import greenImg from '../assets/green.png';
 
 
 
@@ -27,14 +28,51 @@ const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
 
   const filters = [
-    { id: "all", label: "All Projects", count: 13 },
-    { id: "web3", label: "Web3", count: 4 },
+    { id: "all", label: "All Projects", count: 17 },
+    { id: "web3", label: "Web3", count: 3 },
     { id: "ai", label: "AI/ML", count: 4 },
-    { id: "shopify-wordpress", label: "Shopify and Wordpress", count: 6 },
+    { id: "shopify-wordpress", label: "Shopify and WordPress", count: 7 },
     { id: "nocode", label: "No-Code", count: 4 }
   ];
 
   const projects = [
+    {
+      id: 20250813,
+      title: "Green Vitality Bali – Shopify E-commerce Store",
+      description: "Green Vitality Bali is a wellness-focused Shopify store offering organic supplements like Moringa and herbal blends. The site features a clean, eco-conscious design with high-quality product visuals, detailed descriptions, and a seamless checkout experience. Integrated with multiple payment options, it ensures a user-friendly journey for health-conscious customers seeking natural wellness solutions.",
+      image: greenImg, // Using rhs.png as a temporary placeholder
+      category: "shopify",
+      tags: [
+        "Shopify",
+        "E-commerce",
+        "Wellness",
+        "Organic Supplements",
+        "Eco-friendly Design",
+        "Product Showcase",
+        "Checkout Optimization",
+        "Payment Integration"
+      ],
+      featured: true,
+      link: "https://www.greenvitality-bali.com/" // Add the live URL when available
+    },
+    {
+      title: "Kaycee's Premium – Shopify Store",
+      description: "An elegant Shopify e-commerce site for luxury personal care and wellness products. Features include a clean, brand-focused design, seamless navigation, high-quality product displays, and a secure, user-friendly checkout. Integrated with social media and newsletter sign-ups to boost customer engagement and sales.",
+      image: keyeImg, // Using dawood.png as a temporary placeholder
+      category: "shopify",
+      tags: [
+        "Shopify",
+        "E-commerce",
+        "Luxury Branding",
+        "Product Showcase",
+        "Responsive Design",
+        "Checkout Optimization",
+        "Social Media Integration",
+        "Newsletter Integration"
+      ],
+      featured: true,
+      link: "https://www.kayceespremium.com/" // Add the live URL when available
+    },
     {
       id: 20250807,
       title: "AI-Powered Email Auto-Reply System with n8n — Built to Save Time & Sanity!",
@@ -103,7 +141,7 @@ const Projects = () => {
     },
 
     {
-      id: 999,
+      id: 1000,
       title: "Professional Networking Platform (LinkedIn Clone) – Built with Bubble.io",
       description: "A feature-rich LinkedIn-style web app developed using Bubble.io, enabling users to create profiles, connect with professionals, post updates, apply for jobs, and message in real-time. The platform includes dynamic user feeds, job listings, and role-based dashboards — all built without code, showcasing Bubble’s full-stack capabilities.",
       image: linkedinImg, // Placeholder image

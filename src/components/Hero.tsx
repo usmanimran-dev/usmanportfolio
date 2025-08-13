@@ -50,9 +50,7 @@ const Hero = () => {
               </div>
               
               <p className="text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                Crafting cutting-edge digital experiences with modern technologies. 
-                Specializing in blockchain solutions, AI integration, and rapid prototyping 
-                with no-code platforms.
+              Delivering next-generation digital solutions through blockchain technology, AI integration, and rapid no-code development.
               </p>
             </div>
 
@@ -67,16 +65,8 @@ const Hero = () => {
                 View My Work
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
-              <a 
-                href="#contact"
-                onClick={(e) => handleSmoothScroll(e, 'contact')}
-                className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground hero-secondary h-11 px-8 py-2"
-                aria-label="Schedule a call or meeting"
-              >
-                📅 Schedule Call
-              </a>
-              <a 
-                href="https://docs.google.com/document/d/1uTQTi5FA9vgfic3AYAPCF8Y_DRASv8x2wmrKoowYHqA/edit?tab=t.0#heading=h.tm9q5ng275su"
+<a 
+                href="https://docs.google.com/document/d/1tGpuHMM3lVV9sNY1pu2yhwY-XvUmbAtV6hdITgaO78I/edit?tab=t.0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-11 px-8 py-2"
@@ -113,11 +103,11 @@ const Hero = () => {
           <div className={`hidden lg:block ${isVisible ? 'fade-in' : 'opacity-0'}`} style={{ animationDelay: '0.3s' }}>
             <div className="grid grid-cols-2 gap-6">
               <div className="project-card p-6 text-center">
-                <div className="text-3xl font-bold text-gradient-primary mb-2">50+</div>
+                <div className="text-3xl font-bold text-gradient-primary mb-2">13+</div>
                 <div className="text-sm text-muted-foreground">Projects Built</div>
               </div>
               <div className="project-card p-6 text-center">
-                <div className="text-3xl font-bold text-gradient-primary mb-2">15+</div>
+                <div className="text-3xl font-bold text-gradient-primary mb-2">10+</div>
                 <div className="text-sm text-muted-foreground">Technologies</div>
               </div>
               <div className="project-card p-6 text-center">
